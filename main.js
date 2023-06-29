@@ -11,7 +11,7 @@ function add() {
   };
   list.push(listitem);
   for (i = 0; i < list.length; i++) {
-    document.getElementById("result").innerHTML += `<div class="d-flex justify-content-around bg-white rounded-5 p-3 mb-4 gap-3">
+    document.getElementById("result").innerHTML += `<div class="d-flex justify-content-center bg-white rounded-5 p-3 mb-4 gap-3">
         <h3>Name:${list[i].name}</h4>
                  <h3>Amount:${list[i].amount}</h3>
                  <button class="btn btn-dark text-white rounded-circle fw-bolder" onclick="increment(${i})"><i class="fa-solid fa-plus"></i></button>
@@ -27,7 +27,7 @@ function increment(i){
     let increase=prompt("Enter amount to increase:");
     list[i].amount = Number(increase) + Number(list[i].amount);
     for (i = 0; i < list.length; i++) {
-        document.getElementById("result").innerHTML += `<div class="d-flex justify-content-around bg-white rounded-5 p-3 mb-4 gap-3">
+        document.getElementById("result").innerHTML += `<div class="d-flex justify-content-center bg-white rounded-5 p-3 mb-4 gap-3">
         <h3>Name:${list[i].name}</h3>
                  <h3>Amount:${list[i].amount}</h3>
                  <button class="btn btn-dark text-white rounded-circle fw-bolder" onclick="increment(${i})"><i class="fa-solid fa-plus"></i></button>
