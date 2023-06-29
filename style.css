@@ -1,0 +1,11 @@
+#result{
+    max-height: 30rem;
+    overflow-y: scroll;
+}
+
+h3{
+    width: 10rem;
+    max-height: 2rem;
+    overflow-x: scroll ;
+    overflow-y: scroll ;
+}
