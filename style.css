@@ -1,25 +1,25 @@
-#result{
-    max-height: 30rem;
-    overflow-y: scroll;
+#result {
+  max-height: 30rem;
+  overflow-y: scroll;
 }
 
-h3{
-    width: 10rem;
-    max-height: 2rem;
-    overflow-x: scroll ;
-    overflow-y: scroll ;
+h3 {
+  width: 10rem;
+  max-height: 2rem;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
-.inputBox{
-    width:25vw !important;
+.inputBox {
+  width: 25vw !important;
 }
 
-.inputButton{
-    width:fit-content;
+.inputButton {
+  width: fit-content;
 }
 
-@media(max-width:425px){
-    .inputBox{
-        width:75vw !important;
-    }
+@media (max-width: 425px) {
+  .inputBox {
+    width: 75vw !important;
+  }
 }
