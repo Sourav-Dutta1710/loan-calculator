@@ -1,6 +1,6 @@
 #result {
   max-height: 30rem;
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 h3 {
@@ -16,6 +16,10 @@ h3 {
 
 .inputButton {
   width: fit-content;
+}
+
+.hidden-item {
+  display: none !important;
 }
 
 @media (max-width: 425px) {
