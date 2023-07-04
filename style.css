@@ -1,6 +1,6 @@
 #result {
   max-height: 30rem;
-  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 h3 {
