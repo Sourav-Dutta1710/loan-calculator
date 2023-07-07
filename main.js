@@ -10,7 +10,9 @@ function showListItem() {
              <div class="d-flex gap-2 ">
              <input type="number"  placeholder = "Amount" class="hidden-item addValue" id = "submit">
                <span class = "addButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
-             onclick="increment(${i})"><i class="fa-solid fa-plus"></i></button></span>
+             onclick="increment(${i},1)"><i class="fa-solid fa-plus"></i></button></span>
+             <span class = "addButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
+             onclick="increment(${i},2)"><i class="fa-solid fa-minus"></i></i></button></span>
              </div>`;}}
 
 function add() {
@@ -39,13 +41,16 @@ function add() {
   }
 }
 
-function increment(i) {
+function increment(i,j) {
   document.getElementsByClassName("addValue")[i].classList.remove("hidden-item");
   document.getElementsByClassName("addButton")[i].classList.add("hidden-item");
   
   document.getElementsByClassName("addValue")[i].addEventListener("keydown", (e)=>{
     if(e.key === "Enter"){
+      if(j==1)
       list[i].amount =  (Number(document.getElementsByClassName("addValue")[i].value)) + (Number(document.getElementsByClassName("current-amount")[i].innerHTML));
+      if(j==2)
+      list[i].amount =  -(Number(document.getElementsByClassName("addValue")[i].value)) + (Number(document.getElementsByClassName("current-amount")[i].innerHTML));
       document.getElementsByClassName("addValue")[i].classList.add("hidden-item");
       showListItem();
     }
