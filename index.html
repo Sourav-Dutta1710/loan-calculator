@@ -7,10 +7,6 @@
     <title>Loan Calculator</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <script
-      src="https://kit.fontawesome.com/6dc7929f7c.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body class="bg-warning-subtle">
     <!-- Main Section Start -->
@@ -34,10 +30,11 @@
           class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
           onclick="addTask()"
         >
-          <i class="fa-solid fa-plus"></i>
+          <img src="./images/plus-solid.svg"/>
         </button>
       </div>
       <div id="result" class="mt-3 d-flex flex-column align-items-center"></div>
+      <p class="text-center"><button class="btn btn-dark text-white align-center mx-auto" onclick="deleteAll()">Clear All</button></p>
     </section>
     <!-- Main Section End -->
     <script src="main.js"></script>
