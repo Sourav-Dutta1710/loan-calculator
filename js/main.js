@@ -12,11 +12,11 @@ function showListItem(flag) {
              <div class="d-flex gap-2 ">
              <input type="number"  placeholder = "Amount" class="hidden-item addValue" id = "submit">
                <span class = "addButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
-             onclick="increment(${i},1)"><img src="./images/plus-solid.svg"/></button></span>
+             onclick="increment(${list[i].id},1)"><img src="./images/plus-solid.svg"/></button></span>
              <span class = "minusButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
-             onclick="increment(${i},0)"><img src="./images/minus-solid.svg"/></button></span>
+             onclick="increment(${list[i].id},0)"><img src="./images/minus-solid.svg"/></button></span>
              <span class = "deleteButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
-             onclick="deletePerson(${i},0)"><img src="./images/dumpster-solid.svg"/></button></span>
+             onclick="deletePerson(${list[i].id})"><img src="./images/dumpster-solid.svg"/></button></span>
              </div>`;
              if(flag === 1)
                 localStorage.setItem("list",JSON.stringify(list))           
@@ -34,6 +34,7 @@ function addTask() {
     alert("enter valid amount");
    else {
     const listItem = {
+      id:new Date().getTime(),
       name: taskName,
       amount: taskAmount,
     };
@@ -52,7 +53,9 @@ function addTask() {
   document.getElementById("amount").value = "";
 }
 
-function increment(i, j) {
+function increment(id, j) {
+  for(k=0;k<list.length;k++)
+    if(list[k].id === id)i=k;
   const addValue = document.getElementsByClassName("addValue")[i];
   let currentAmount = document.getElementsByClassName("current-amount")[i];
   addValue.classList.remove("hidden-item");
@@ -81,7 +84,9 @@ function addButton(event) {
   if (event.key === "Enter") addTask();
 }
 
-function deletePerson(i){
+function deletePerson(id){
+  for(k=0;k<list.length;k++)
+    if(list[k].id === id)i=k;
     list.splice(i,1);
     localStorage.setItem("list",JSON.stringify(list));
     showListItem(0);   

@@ -10,11 +10,11 @@ h3 {
   overflow-y: scroll;
 }
 
-.inputBox {
+.input-box {
   width: 25vw !important;
 }
 
-.inputButton {
+.input-button {
   width: fit-content;
 }
 
@@ -23,7 +23,7 @@ h3 {
 }
 
 @media (max-width: 425px) {
-  .inputBox {
+  .input-box {
     width: 75vw !important;
   }
 }
