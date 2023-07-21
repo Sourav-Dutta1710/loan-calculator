@@ -10,7 +10,7 @@ function showListItem(flag) {
       "result"
     ).innerHTML += `<div class="d-flex flex-column flex-md-row justify-content-center bg-white rounded-5 p-3 mb-4 gap-3">
       <h3>Name: ${list[i].name}</h3>
-      <h3>Amount: <span class = "current-amount">${list[i].amount}</span></h3>
+      <h3>Amount:${list[i].amount}</h3>
       <div class="d-flex gap-2 ">
       <span class = "addButton"><button class="inputButton btn btn-dark text-white rounded-circle fw-bolder align-self-center"
       onclick="editTask(${list[i].id})"><img src="./images/pen-solid.svg"/></button></span>

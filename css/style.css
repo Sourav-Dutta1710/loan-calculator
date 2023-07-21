@@ -4,10 +4,8 @@
 }
 
 h3 {
-  width: 10rem;
-  max-height: 2rem;
+  width: 12rem;
   overflow-x: scroll;
-  overflow-y: scroll;
 }
 
 .input-box {
@@ -22,4 +20,8 @@ h3 {
   .input-box {
     width: 75vw !important;
   }
+}
+
+div[name="a"]{
+  color: aqua;
 }
